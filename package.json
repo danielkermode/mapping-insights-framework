@@ -1,0 +1,50 @@
+{
+  "name": "mapping-insights-framework",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "description": "web",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development",
+    "build": "webpack --progress --profile --colors --mode=production",
+    "build:watch": "webpack --progress --profile --colors --mode=development --watch",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cruxnz/crux-core.git"
+  },
+  "author": "danielkermode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cruxnz/crux-core/issues"
+  },
+  "homepage": "https://github.com/Cruxnz/crux-core#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "standard": "^11.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.6.0",
+    "webpack-clean-obsolete-chunks": "^0.4.0",
+    "webpack-cleanup-plugin": "^0.5.1",
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "dependencies": {
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2"
+  }
+}
