@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { colors } from '../../common/constants'
-import Fetching from '../Fetching'
+// import { colors } from '../../common/constants'
+// import Fetching from '../Fetching'
 import styles from './BasicMetric.styles'
 
 class BasicMetric extends Component {
@@ -20,13 +20,13 @@ class BasicMetric extends Component {
       ? {
         symbol: this.props.isPercent ? '' : '+',
         icon: 'trending_up',
-        color: colors.green
+        color: 'green'
       }
       : {
         // symbol is empty as number already has a minus
         symbol: '',
         icon: 'trending_down',
-        color: colors.red
+        color: 'red'
       }
     return (
       <div className={`${this.props.contentContainerStyling || ''} ${styles.contentContainer}`}>
@@ -41,7 +41,7 @@ class BasicMetric extends Component {
           </div>
           <div className={`${this.props.metricContainerStyling || ''} ${styles.metricContainer}`}>
             <div className={styles.metric}>
-              {this.props.fetching ? <Fetching /> : this.props.metric}
+              {this.props.fetching ? this.props.metric : this.props.metric}
             </div>
             {!this.props.fetching && this.props.diff &&
               <div className={`${this.props.performanceTagStyling || ''} ${styles.performanceTag}`}>
