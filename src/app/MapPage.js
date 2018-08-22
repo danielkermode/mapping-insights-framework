@@ -23,7 +23,7 @@ class MapPage extends Component {
       return a + b.collected
     }, 0)
     return (
-      <div>
+      <div style={{ margin: 50 }}>
         <InsightsPanel
           numberOfClients={this.props.clients.length}
           numberOfPayingClients={numberOfPayingClients}

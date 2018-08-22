@@ -25,7 +25,7 @@ export const raw = StyleSheet.create({
   sideSection: {
     height: '100%',
     width: metrics.col2,
-    backgroundColor: colors.lighterBlack,
+    backgroundColor: 'orange',
     padding: metrics.smallPadding,
     display: 'flex',
     flexDirection: 'column',
