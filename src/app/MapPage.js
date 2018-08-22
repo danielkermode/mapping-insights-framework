@@ -18,12 +18,17 @@ class MapPage extends Component {
     const totalDebt = this.props.clients.reduce((a, b) => {
       return a + b.totalDebt
     }, 0)
+
+    const totalCollected = this.props.clients.reduce((a, b) => {
+      return a + b.collected
+    }, 0)
     return (
       <div>
         <InsightsPanel
           numberOfClients={this.props.clients.length}
           numberOfPayingClients={numberOfPayingClients}
           totalDebt={totalDebt}
+          totalCollected={totalCollected}
         />
         <InsightsMap clients={this.props.clients} />
       </div>

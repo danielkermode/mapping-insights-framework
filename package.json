@@ -13,16 +13,8 @@
     "lint": "standard",
     "lint:fix": "standard --fix"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Cruxnz/crux-core.git"
-  },
   "author": "danielkermode",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Cruxnz/crux-core/issues"
-  },
-  "homepage": "https://github.com/Cruxnz/crux-core#readme",
   "devDependencies": {
     "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
@@ -42,6 +34,7 @@
   },
   "dependencies": {
     "aphrodite": "^2.2.3",
+    "bootstrap": "^4.1.3",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-google-maps": "^9.4.5",

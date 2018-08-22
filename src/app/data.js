@@ -3,11 +3,13 @@ const clients = [{'location': {'type': 'Point', 'coordinates': [174.6309383, -36
 const adjustedClients = clients.map(client => {
   const isPaying = Math.random() > 0.5
   const totalDebt = Math.floor(Math.random() * 950) + 50
+  const collected = Math.floor(Math.random() * totalDebt)
 
   return {
     ...client,
     isPaying,
-    totalDebt
+    totalDebt,
+    collected
   }
 })
 

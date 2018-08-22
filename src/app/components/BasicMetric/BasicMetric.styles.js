@@ -1,5 +1,5 @@
 import { StyleSheet } from 'aphrodite'
-import { stylesFromRaw } from '../../common/util'
+import stylesFromRaw from '../../util/stylesFromRaw'
 import { metrics, text, colors } from '../../constants'
 
 export const raw = StyleSheet.create({
