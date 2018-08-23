@@ -7,7 +7,7 @@ const WebpackCleanupPlugin = require('webpack-cleanup-plugin')
 // HTML file generation from template for app, both dev and prod
 const htmlAppPlugin = new HtmlWebpackPlugin({
   template: 'src/app/app.ejs',
-  filename: 'app.html',
+  filename: '../app.html',
   inject: false
 })
 
@@ -16,8 +16,8 @@ module.exports = {
     app: './src/app/app.js'
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'assets/[name]-bundle.[hash].js',
+    path: path.resolve(__dirname, 'dist/assets'),
+    filename: '[name]-bundle.[hash].js',
     publicPath: '/'
   },
   resolve: {
