@@ -9,8 +9,8 @@ import {
 
 const MapPin = props => {
   const url = props.client.isPaying
-    ? '/assets/images/icon-green.png'
-    : '/assets/images/icon-inactive.png'
+    ? '/images/icon-green.png'
+    : '/images/icon-inactive.png'
   return <Marker
     enableRetinaIcons
     key={props.client.id}
