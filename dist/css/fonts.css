@@ -1,0 +1,113 @@
+/* --------  FONT BASE STYLING BELOW -------- */
+
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, ol, ul, li, tr, th, td, html, body, div, span {
+
+  font: inherit;
+  font-family: Raleway, Helvetica, sans-serif;
+  color: #343434;
+
+}
+
+h1, h2, h3, h4 {
+
+  font-family: Europa, Helvetica, sans-serif;
+  color: #343434;
+
+}
+
+h5, h6 {
+
+  font-family: Roboto, Helvetica, sans-serif;
+  color: #343434;
+
+}
+
+
+p, blockquote, pre,
+a, ol, ul, li, tr, th, td {
+
+  font-size: 12px;
+  font-family: Raleway, Helvetica, sans-serif;
+  color: #343434;
+
+}
+
+
+/* --------  FONT STYLING BELOW -------- */
+
+
+h1, .title1 {
+
+  font-size: 30px;
+  color: #FF8802;
+  font-family: Europa, Helvetica, sans-serif;
+  font-family: Europa, Helvetica, sans-serif;
+  color: #FF8802;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+
+h2, .title2 {
+
+  font-size: 30px;
+  font-family: Europa, Helvetica, sans-serif;
+  color: #FF8802;
+  line-height: 33px;
+
+}
+
+.main-header-title {
+  font-size: 30px;
+  font-family: Europa, Helvetica, sans-serif;
+  color: #FF8802;
+}
+
+h4, .subheading1 {
+
+  font-size: 15px;
+  font-family: Roboto, Helvetica, sans-serif;
+  line-height: 20px;
+
+}
+
+
+.subtitle1 {
+
+  font-size: 11px;
+  font-family: Europa, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  color: #6E6F73;
+
+}
+
+p, .paragraph {
+
+  font-family: Raleway, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+
+}
+
+.nav-tab-type, .nav-tab-type > span {
+
+  font-size: 12px;
+  font-family: Raleway, Helvetica, sans-serif;
+  color: #FFFFFF;
+  text-decoration: none;
+
+}
+
+
+.small-button-text {
+  font-family: Europa, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 8px;
+  letter-spacing: 1px;
+  margin: 0;
+  line-height: 0;
+  color: #C7C7C7;
+}

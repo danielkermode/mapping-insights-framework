@@ -1,20 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+  <title>Map Insights</title>
+  <!-- Initial compatibility below -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Minify styling & google API below -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNLyFtdjQiX0IIkytORzYQXxCMi-lnJ9k&libraries=geometry,drawing,places"></script>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Main styling for every template below -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
 
-  <title>Debtworks Map</title>
+  <!-- Styling for specific listed template below -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 </head>
-<body>
-  <div>
-    <div id="app"></div>
-  </div>
-  <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
-</body>
+<body id="body">
 
+<!-- HEADER BELOW -->
+
+<div id="header-container" >
+	<a id="logo" href="/" title="Debtworks ">
+    <img id="logoImage" title="Debtworks" src="./images/debtworks-logo.gif"  />
+  </a>
+  <div class="pair-container">
+    <div id="login-profile-container">
+      <i class="material-icons account-circle">account_circle</i>
+      <p>10207 | Gilrose Finance Company Ltd</p>
+      <a class="change-button small-button-text" href="/members/landing.asp">Change</a>
+    </div>
+    <div id="cta-container">
+      <h4 class="subtitle1">
+        FREE PHONE
+      </h4>
+      <h4 class="subheading1">
+        0800 922 922
+      </h4>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR BELOW -->
+
+<div id="nav-main-container">
+
+  <div id="nav-container">
+  	<ul id="nav-list-container">
+  		<li><a class="nav-tab-button nav-tab-type" id="nav1" href="/members/"><span>Home</span> <i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+      <li><a class="nav-tab-button-active nav-tab-type" id="nav2"><span>Map Insights</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav2" href="/members/queries.asp"><span>Outstanding Queries (0)</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav2" href="/members/todo.asp"><span>My To-do List</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav3" href="/debts/list_all.asp?active=1" target="_blank"><span>View My Debts</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav3" href="/debts/search.asp" target="_blank"><span>Search/Query</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav4" href="/members/reports.asp"><span>Reports</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav5" href="/members/details.asp"><span>My Details</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="" href="/members/members.asp"><span>Edit Access</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav6" href="/debts/load.asp"><span>Load a debt</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav6a" href="/debts/status.asp" target="_blank"><span>Debt Status Codes</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav9" href="http://www.centrix.co.nz/Business/Debtworks" target="_blank">Credit Reporting<i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  		<li><a class="nav-tab-button nav-tab-type" id="nav9a" href="/seminars/">Upcoming Seminars<i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+  	</ul>
+    <ul id="nav-logout-container">
+      <li><a class="nav-tab-button nav-tab-type" id="nav10" href="/members/logout.asp"><span>Logout</span><i class="material-icons nav-arrow">keyboard_arrow_right</i></a></li>
+    </ul>
+  </div>
+
+  <!-- MAIN CONTENTS BELOW -->
+
+    <div id="main">
+      <div id="main-header-section">
+        <h2 class="main-header-title">Title</h2>
+        <p>Secondary paragraph for more information regarding title</p>
+      </div>
+      <div id="main-body-section">
+          <!-- MAP INSIGHTS APP  -->
+          <div id="app"></div>
+      </div>
+
+
+  </div>
+  <!-- MAP INSIGHTS SCRIPT REFERENCE HERE, DO NOT DELETE -->
+  <script src="<%= htmlWebpackPlugin.files.chunks.app.entry %>"></script>
+  <!-- END OF MAIN CONTENTS -->
+
+</body>
 </html>
