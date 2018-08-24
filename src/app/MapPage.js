@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import InsightsMap from './components/InsightsMap'
 import InsightsPanel from './components/InsightsPanel'
+import styles from './MapPage.styles'
 
 class MapPage extends Component {
   constructor (props) {
@@ -23,14 +24,16 @@ class MapPage extends Component {
       return a + b.collected
     }, 0)
     return (
-      <div style={{ margin: 50 }}>
-        <InsightsPanel
-          numberOfClients={this.props.clients.length}
-          numberOfPayingClients={numberOfPayingClients}
-          totalDebt={totalDebt}
-          totalCollected={totalCollected}
-        />
+      <div className={styles.mainContainer}>
+        <div className={styles.contentContainer}>
+          <InsightsPanel
+            numberOfClients={this.props.clients.length}
+            numberOfPayingClients={numberOfPayingClients}
+            totalDebt={totalDebt}
+            totalCollected={totalCollected}
+          />
         <InsightsMap clients={this.props.clients} />
+        </div>
       </div>
     )
   }
