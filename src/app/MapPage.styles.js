@@ -4,9 +4,9 @@ import { metrics, colors } from './constants'
 
 const raw = StyleSheet.create({
   mainContainer: {
-      width: '96%',
-      height: '100%',
-      padding: metrics.section
+    width: '96%',
+    height: '100%',
+    padding: metrics.section
   },
   contentContainer: {
     boxShadow: colors.shadow,
@@ -15,8 +15,8 @@ const raw = StyleSheet.create({
     backgroundColor: colors.white,
     borderRadius: metrics.baseRadius,
     overflow: 'hidden',
-    height: '100%',
-  },
+    height: '100%'
+  }
 })
 
 export default {
