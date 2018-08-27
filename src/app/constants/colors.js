@@ -1,8 +1,8 @@
 export default {
 
-  // DirectBlues
-  blue: '#0D97FF',
-  dimmedBlue: '#0989F6',
+  // DebtWorks Oranges
+  orange: '#FF8802',
+  dimmedOrange: '#bf6500',
   darkBlue: '#0077FF',
   darkestBlue: '#1F2A51',
   activeDarkestBlue: '#161F40',

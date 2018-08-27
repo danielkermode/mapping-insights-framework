@@ -6,12 +6,10 @@ class InsightsPanel extends Component {
   render () {
     return (
       <div className={styles.metricsContainer}>
-        <div className={styles.leftMetricsContainer}>
           <div className={styles.metricContainer}>
             <BasicMetric
-              icon='store'
+              icon='group'
               title={'Total Debtors'}
-              contentContainerStyling={styles.debtorsMetricContainer}
               metricContainerStyling={styles.metricContainerStyling}
               performanceTagStyling={styles.performanceTagStyling}
               fetching={false}
@@ -20,9 +18,8 @@ class InsightsPanel extends Component {
           </div>
           <div className={styles.metricContainer}>
             <BasicMetric
-              icon='store'
+              icon='how_to_reg'
               title={'Paying Debtors'}
-              contentContainerStyling={styles.debtorsMetricContainer}
               metricContainerStyling={styles.metricContainerStyling}
               performanceTagStyling={styles.performanceTagStyling}
               fetching={false}
@@ -31,9 +28,8 @@ class InsightsPanel extends Component {
           </div>
           <div className={styles.metricContainer}>
             <BasicMetric
-              icon='store'
+              icon='attach_money'
               title={'Total Debt Loaded'}
-              contentContainerStyling={styles.debtorsMetricContainer}
               metricContainerStyling={styles.metricContainerStyling}
               performanceTagStyling={styles.performanceTagStyling}
               fetching={false}
@@ -42,16 +38,14 @@ class InsightsPanel extends Component {
           </div>
           <div className={styles.metricContainer}>
             <BasicMetric
-              icon='store'
+              icon='monetization_on'
               title={'Total Debt Collected'}
-              contentContainerStyling={styles.debtorsMetricContainer}
               metricContainerStyling={styles.metricContainerStyling}
               performanceTagStyling={styles.performanceTagStyling}
               fetching={false}
               metric={`$${this.props.totalCollected}`}
             />
           </div>
-        </div>
       </div>
     )
   }

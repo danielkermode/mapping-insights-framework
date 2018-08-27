@@ -5,40 +5,34 @@ import { metrics, text, colors } from '../../constants'
 export const raw = StyleSheet.create({
   contentContainer: {
     minWidth: '210px',
+    height: '100%',
     width: '100%',
-    height: '90%',
     display: 'flex',
-    marginLeft: '6px',
-    marginRight: '6px',
     flexDirection: 'row',
     justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    borderRadius: metrics.baseRadius,
-    overflow: 'hidden',
-    '@media only screen and (max-width: 600px)': {
-      height: '100px',
-      minWidth: '220px',
-      marginTop: '6px',
-      marginBottom: '6px'
-    }
+    alignItems: 'flex-start'
   },
   sideSection: {
     height: '100%',
     width: metrics.col2,
-    backgroundColor: 'orange',
-    padding: metrics.smallPadding,
+    backgroundColor: colors.orange,
+    border: `1px solid ${colors.lighterBlack}`,
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   icon: {
-    fontSize: '16px',
-    color: colors.darkBlack
+    fontSize: '18px',
+    color: colors.dimmedOrange
   },
   mainSection: {
     height: '100%',
-    width: metrics.col10
+    width: metrics.col10,
+    borderTop: `1px solid ${colors.darkGray}`,
+    borderRight: `1px solid ${colors.darkGray}`,
+    borderBottom: `1px solid ${colors.darkGray}`,
+    borderRadius: `0 ${metrics.baseRadius} ${metrics.baseRadius} 0`
   },
   titleContainer: {
     height: '30%',
@@ -48,10 +42,7 @@ export const raw = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colors.offWhite,
-    borderRadius: `0 ${metrics.baseRadius} 0 0`,
-    borderTop: `1px solid ${colors.darkGray}`,
-    borderRight: `1px solid ${colors.darkGray}`,
-    borderBottom: `1px solid ${colors.darkGray}`
+    borderRadius: `0 ${metrics.baseRadius} 0 0`
   },
   title: {
     ...text.style.bodycopySmall,
@@ -61,13 +52,11 @@ export const raw = StyleSheet.create({
     height: '70%',
     width: metrics.col12,
     backgroundColor: colors.white,
+    borderRadius: `0 0 ${metrics.baseRadius} 0`,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: `0 0 ${metrics.baseRadius} 0`,
-    borderRight: `1px solid ${colors.darkGray}`,
-    borderBottom: `1px solid ${colors.darkGray}`
+    alignItems: 'center'
   },
   metric: {
     ...text.style.headingThin,
