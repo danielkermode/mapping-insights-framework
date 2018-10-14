@@ -1,11 +1,32 @@
 import React, { Component } from 'react'
 import BasicMetric from '../BasicMetric'
 import styles from './InsightsPanel.styles'
+import DatePicker from '../DatePicker'
+import moment from 'moment'
 
 class InsightsPanel extends Component {
   render () {
     return (
-      <div className={styles.metricsContainer}>
+      <div>
+        <div>
+          <DatePicker
+            initialDate={moment().startOf('day').subtract(349, 'day')}
+            title='Range'
+            onChangeHandler={this.props.updateStartDate}
+            containerStyling={styles.datePickerContainerStyling}
+            titleStyling={styles.datePickerTitleStyling}
+            buttonStyling={styles.datePickerFromButtonStyling}
+          />
+          <DatePicker
+            onChangeHandler={this.props.updateEndDate}
+            icon={'keyboard_arrow_right'}
+            containerStyling={styles.datePickerContainerStyling}
+            titleStyling={styles.datePickerTitleStyling}
+            buttonStyling={styles.datePickerToButtonStyling}
+          />
+        </div>
+        <div className={styles.metricsContainer}>
+
           <div className={styles.metricContainer}>
             <BasicMetric
               icon='group'
@@ -46,6 +67,7 @@ class InsightsPanel extends Component {
               metric={`$${this.props.totalCollected}`}
             />
           </div>
+        </div>
       </div>
     )
   }

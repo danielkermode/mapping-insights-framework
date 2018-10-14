@@ -1,4 +1,4 @@
-// import 'bootstrap/dist/css/bootstrap.min.css' // not needed 
+// import 'bootstrap/dist/css/bootstrap.min.css' // not needed
 import React from 'react'
 import ReactDOM from 'react-dom'
 import MapPage from './MapPage'
