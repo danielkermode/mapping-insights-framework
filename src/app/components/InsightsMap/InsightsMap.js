@@ -15,8 +15,8 @@ const MapPin = props => {
     enableRetinaIcons
     key={props.client.id}
     position={{
-      lat: props.client.location.coordinates[1],
-      lng: props.client.location.coordinates[0]
+      lat: props.client.location.coordinates.element[1],
+      lng: props.client.location.coordinates.element[0]
     }}
     icon={{
       url

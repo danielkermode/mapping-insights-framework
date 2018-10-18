@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDatePicker from 'react-datepicker'
 import moment from 'moment'
-
+import 'react-datepicker/dist/react-datepicker.css'
 import styles from './DatePicker.styles'
 
 class DatePicker extends Component {

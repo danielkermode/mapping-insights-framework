@@ -10,8 +10,13 @@ class MapPage extends Component {
     this.state = {
       mode: 'insights',
       startDate: moment().startOf('day').subtract(90, 'day').valueOf(),
-      endDate: moment().endOf('day').valueOf()
+      endDate: moment().endOf('day').valueOf(),
+      filteredDebtRange: { min: 0, max: 1000 }
     }
+  }
+
+  updateFilteredDebtRange = filteredDebtRange => {
+    this.setState({ filteredDebtRange })
   }
 
   updateStartDate = startDate => {
@@ -24,12 +29,23 @@ class MapPage extends Component {
     this.setState({ endDate })
   }
 
+  isDebtWithinRange = client => {
+    const debtOwed = client.totalDebt - client.collected
+    const max = this.state.filteredDebtRange.max
+    const min = this.state.filteredDebtRange.min
+
+    return debtOwed >= min && debtOwed <= max
+  }
+
+  isDateWithinRange = client => {
+    const clientDate = moment(client.createdAt)
+    return clientDate.isBetween(this.state.startDate, this.state.endDate, 'days', '[]')
+  }
+
   render () {
-    const filteredClients = this.props.clients.filter(client => {
-      const clientDate = moment(client.createdAt)
-      console.log(clientDate)
-      return clientDate.isBetween(this.state.startDate, this.state.endDate, 'days', '[]')
-    })
+    const filteredClients = this.props.clients
+      .filter(this.isDateWithinRange)
+      .filter(this.isDebtWithinRange)
 
     const numberOfPayingClients = filteredClients.filter(client => {
       return client.isPaying
@@ -53,6 +69,8 @@ class MapPage extends Component {
             totalCollected={totalCollected}
             updateStartDate={this.updateStartDate}
             updateEndDate={this.updateEndDate}
+            updateFilteredDebtRange={this.updateFilteredDebtRange}
+            filteredDebtRange={this.state.filteredDebtRange}
           />
           <InsightsMap clients={filteredClients} />
         </div>

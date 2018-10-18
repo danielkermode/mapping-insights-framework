@@ -3,6 +3,8 @@ import BasicMetric from '../BasicMetric'
 import styles from './InsightsPanel.styles'
 import DatePicker from '../DatePicker'
 import moment from 'moment'
+import InputRange from 'react-input-range'
+import 'react-input-range/lib/css/index.css'
 
 class InsightsPanel extends Component {
   render () {
@@ -25,8 +27,16 @@ class InsightsPanel extends Component {
             buttonStyling={styles.datePickerToButtonStyling}
           />
         </div>
+        <div>
+          <div>Filter by Debt Owed</div>
+          <InputRange
+            maxValue={1000}
+            minValue={0}
+            value={this.props.filteredDebtRange}
+            onChange={this.props.updateFilteredDebtRange}
+          />
+        </div>
         <div className={styles.metricsContainer}>
-
           <div className={styles.metricContainer}>
             <BasicMetric
               icon='group'
