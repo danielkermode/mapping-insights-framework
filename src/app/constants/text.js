@@ -1,13 +1,13 @@
 import colors from './colors'
 
-export const headerFont = '\'ColfaxMedium\', sans-serif'
-export const buttonFont = '\'ColfaxLight\', sans-serif'
-export const bodyFont = '\'ColfaxLight\', sans-serif'
+export const headerFont = '\'europa-regular\', sans-serif'
+export const buttonFont = '\'europa-regular\', sans-serif'
+export const bodyFont = '\'europa-regular\', sans-serif'
 
 const type = {
-  light: '\'ColfaxLight\', sans-serif',
-  base: '\'Colfax\', sans-serif',
-  bold: '\'ColfaxMedium\', sans-serif'
+  light: '\'europa-regular\', sans-serif',
+  base: '\'europa-regular\', sans-serif',
+  bold: '\'europa-regular\', sans-serif'
 }
 
 // Consider changing 'height' to 'width' for better accuracy
