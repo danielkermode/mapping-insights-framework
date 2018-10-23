@@ -15,8 +15,8 @@ window.fetch('https://oca.debtworks.co.nz/debts/getxml.asp')
   .then(xml => {
     const data = parser.parse(xml)
     const clientData = data.root
-    if (Array.isArray(clientData)) {
-      clients = clientData
+    if (Array.isArray(clientData.element)) {
+      clients = clientData.element
     } else {
       clients.push(clientData.element)
     }
