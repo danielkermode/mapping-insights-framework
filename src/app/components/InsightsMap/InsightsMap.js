@@ -4,10 +4,12 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
+  InfoWindow,
   Marker
 } from 'react-google-maps'
 
 const MapPin = props => {
+  console.log(props.client)
   const url = props.client.isPaying
     ? '/images/icon-green.png'
     : '/images/icon-inactive.png'
@@ -18,10 +20,19 @@ const MapPin = props => {
       lat: props.client.location.coordinates.element[1],
       lng: props.client.location.coordinates.element[0]
     }}
-    icon={{
-      url
-    }}
-  />
+    icon={{url}}
+    onMouseOver={props.handleMouseOver}
+    onMouseOut={props.handleMouseExit}>
+    {props.showInfoWindow &&
+      (<InfoWindow>
+        <div>
+          <h5>Name: {props.client.name}</h5>
+          <h5>Is Paying: {props.client.isPaying ? 'Yes' : 'No'}</h5>
+          <h5>Total Debt: ${props.client.totalDebt}</h5>
+          <h5>Debt Collected: ${props.client.collected}</h5>
+        </div>
+      </InfoWindow>)}
+  </Marker>
 }
 
 const GoogleMapsWrapper = withScriptjs(withGoogleMap(props => {
@@ -32,6 +43,9 @@ const GoogleMapsWrapper = withScriptjs(withGoogleMap(props => {
     {props.clients.map(client => {
       return <MapPin
         client={client}
+        showInfoWindow={props.showInfoWindow}
+        handleMouseOver={props.handleMouseOver}
+        handleMouseExit={props.handleMouseExit}
       />
     })}
   </GoogleMap>
@@ -41,6 +55,9 @@ class MappingInsightsMap extends Component {
   render () {
     return (
       <GoogleMapsWrapper
+        showInfoWindow={this.props.showInfoWindow}
+        handleMouseOver={this.props.handleMouseOver}
+        handleMouseExit={this.props.handleMouseExit}
         isMarkerShown
         googleMapURL='asd'
         loadingElement={<div style={{ height: '100%' }} />}
