@@ -17,7 +17,7 @@ window.fetch('https://oca.debtworks.co.nz/debts/getxml.asp')
     const clientData = data.root
     if (Array.isArray(clientData.element)) {
       clients = clientData.element
-    } else {
+    } else if (clientData && clientData.element) {
       clients.push(clientData.element)
     }
     ReactDOM.render(
