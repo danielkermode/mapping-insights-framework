@@ -45,8 +45,8 @@ class MapPage extends Component {
     const debtOwed = client.totalDebt - client.collected
     const max = this.state.filteredDebtRange.max
     const min = this.state.filteredDebtRange.min
-
-    return debtOwed >= min && debtOwed <= max
+    const isWithinRange = debtOwed >= min && debtOwed <= max
+    return isWithinRange
   }
 
   isDateWithinRange = client => {
@@ -70,7 +70,6 @@ class MapPage extends Component {
     const totalCollected = filteredClients.reduce((a, b) => {
       return a + b.collected
     }, 0)
-
     return (
       <div className={styles.mainContainer}>
         <div className={styles.contentContainer}>

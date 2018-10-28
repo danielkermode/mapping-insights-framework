@@ -9,7 +9,6 @@ import {
 } from 'react-google-maps'
 
 const MapPin = props => {
-  console.log(props.client)
   const url = props.client.isPaying
     ? '/images/icon-green.png'
     : '/images/icon-inactive.png'
@@ -17,13 +16,17 @@ const MapPin = props => {
     enableRetinaIcons
     key={props.client.id}
     position={{
+      // JSON data
+      // lat: props.client.location.coordinates[1],
+      // lng: props.client.location.coordinates[0]
+      // XML data
       lat: props.client.location.coordinates.element[1],
       lng: props.client.location.coordinates.element[0]
     }}
     icon={{url}}
     onMouseOver={props.handleMouseOver}
     onMouseOut={props.handleMouseExit}>
-    {props.showInfoWindow &&
+    {false &&
       (<InfoWindow>
         <div>
           <h5>Name: {props.client.name}</h5>
