@@ -6,7 +6,6 @@ import parser from 'fast-xml-parser'
 
 // Dummy JSON data
 // import dummyData from './dummy.json'
-
 // const clients = dummyData.map(client => {
 //   const isPaying = Math.random() > 0.5
 //   const totalDebt = Math.floor(Math.random() * 950) + 50

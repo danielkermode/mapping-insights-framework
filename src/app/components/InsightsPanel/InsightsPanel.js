@@ -70,7 +70,7 @@ class InsightsPanel extends Component {
                 metricContainerStyling={styles.metricContainerStyling}
                 performanceTagStyling={styles.performanceTagStyling}
                 fetching={false}
-                metric={`$${this.props.totalDebt.toLocaleString(navigator.language, { minimumFractionDigits: 2 })}`}
+                metric={`$${this.props.totalDebt.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}
               />
             </div>
             <div className={styles.metricContainer}>
@@ -80,7 +80,7 @@ class InsightsPanel extends Component {
                 metricContainerStyling={styles.metricContainerStyling}
                 performanceTagStyling={styles.performanceTagStyling}
                 fetching={false}
-                metric={`$${this.props.totalCollected.toLocaleString(navigator.language, { minimumFractionDigits: 2 })}`}
+                metric={`$${this.props.totalCollected.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}`}
               />
             </div>
           </div>

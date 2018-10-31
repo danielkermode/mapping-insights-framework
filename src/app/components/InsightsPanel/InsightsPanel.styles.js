@@ -1,6 +1,6 @@
 import { StyleSheet } from 'aphrodite'
 import stylesFromRaw from '../../util/stylesFromRaw'
-import { metrics, text, colors } from '../../constants'
+import { metrics, colors } from '../../constants'
 
 const raw = StyleSheet.create({
   metricsContainer: {

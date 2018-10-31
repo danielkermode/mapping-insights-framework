@@ -45,7 +45,8 @@ export const raw = StyleSheet.create({
     borderRadius: `0 ${metrics.baseRadius} 0 0`
   },
   title: {
-    ...text.style.bodycopySmall,
+    // ...text.style.bodycopySmall,,
+    fontSize: '13px',
     color: colors.black
   },
   metricContainer: {
@@ -59,7 +60,7 @@ export const raw = StyleSheet.create({
     alignItems: 'center'
   },
   metric: {
-    ...text.style.headingThin,
+    // ...text.style.headingThin,
     fontSize: '28px',
     color: colors.tinted
   },
@@ -77,7 +78,6 @@ export const raw = StyleSheet.create({
     borderRadius: `${metrics.baseRadius} ${metrics.baseRadius} ${metrics.baseRadius} 0`
   },
   percentage: {
-    fontFamily: text.type.bold,
     fontSize: text.size.bodycopySmall
   },
   trendingIcon: {

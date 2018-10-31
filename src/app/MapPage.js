@@ -11,20 +11,8 @@ class MapPage extends Component {
       mode: 'insights',
       startDate: moment().startOf('day').subtract(90, 'day').valueOf(),
       endDate: moment().endOf('day').valueOf(),
-      filteredDebtRange: { min: 0, max: 15000 },
-      showInfoWindow: false
+      filteredDebtRange: { min: 0, max: 15000 }
     }
-  }
-
-  handleMouseOver = e => {
-    this.setState({
-      showInfoWindow: true
-    })
-  }
-  handleMouseExit = e => {
-    this.setState({
-      showInfoWindow: false
-    })
   }
 
   updateFilteredDebtRange = filteredDebtRange => {
@@ -85,8 +73,6 @@ class MapPage extends Component {
           />
           <InsightsMap
             showInfoWindow={this.state.showInfoWindow}
-            handleMouseOver={this.handleMouseOver}
-            handleMouseExit={this.handleMouseExit}
             clients={filteredClients}
           />
         </div>
